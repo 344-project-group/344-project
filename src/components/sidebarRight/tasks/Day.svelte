@@ -39,17 +39,10 @@
 	<div class="flex bg-gray-800 px-2 py-1 rounded-md font-semibold text-sm text-gray-500">
 		<div class="basis-1/2 flex">
 			{#if isToday(date)}
-				<div class="text-center basis-1/2 bg-blue-500 rounded-md text-white">Today</div>
-				<div class="ml-2">
-					{date.getDate()}
-					{months[date.getMonth()]}
-				</div>
-			{:else}
-				<div class="">
-					{date.getDate()}
-					{months[date.getMonth()]}
-				</div>
+				<div class="text-center basis-1/2 bg-blue-500 rounded-md text-white mr-2">Today</div>
 			{/if}
+			{date.getDate()}
+			{months[date.getMonth()]}
 		</div>
 		<div class="basis-1/2 text-right">
 			{days[date.getDay()].toUpperCase()}
