@@ -2,6 +2,8 @@
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 
+	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
+
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
@@ -17,7 +19,7 @@
 			newWorker?.addEventListener('statechange', () => {
 				if (newWorker.state === 'installed') {
 					if (confirm('A new version is available. Refresh to update?')) {
-						newWorker.postMessage({ type: 'SKIP_WAITING' })
+						newWorker.postMessage({ type: 'SKIP_WAITING' });
 						window.location.reload();
 					}
 				}
@@ -37,13 +39,15 @@
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<strong class="text-sm uppercase">Calendar</strong>
-				
 			</svelte:fragment>
-			<svelte:fragment slot="trail">
-			</svelte:fragment>
+			<svelte:fragment slot="trail"></svelte:fragment>
 		</AppBar>
 	</div>
 	<!-- Page Route Content -->
+	<svelte:fragment slot="sidebarRight">
+		<SidebarRight />
+	</svelte:fragment>
+
 	<slot />
 </AppShell>
 
