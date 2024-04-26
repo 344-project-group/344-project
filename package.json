@@ -41,7 +41,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@floating-ui/dom": "1.6.3",
-    "svelte-datepicker": "^1.0.0"
+    "@floating-ui/dom": "1.6.3"
   }
 }
