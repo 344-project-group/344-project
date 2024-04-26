@@ -30,7 +30,6 @@
 	 * @param {Array<{title:string, description:string, interval:{start:Date, end:Date}}>} tasks - The tasks for the day.
 	 * @returns {{date:Date,  tasks:Array<{title:string, description:string, interval:{start:Date, end:Date}}>}} - The day object.
 	 */
-	
 	function createDay(date, tasks) {
 		const day = {
 			date: date,

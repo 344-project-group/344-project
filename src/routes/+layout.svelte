@@ -2,7 +2,7 @@
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 	import { initializeStores, Modal } from '@skeletonlabs/skeleton';
-	import TaskModal from '../components/modals/TaskModal.svelte';
+	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
 	/*
 	 * Record<string, ModalComponent>
 	 */
