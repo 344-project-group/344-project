@@ -11,8 +11,13 @@
 </script>
 
 {#if $modalStore[0]}
-	<TaskModalHeader />
-	<TaskModalLeftActivity />
-	<TaskModalRightActivity />
-	<TaskModalFooter />
+	<div class="">
+		<div class="bg-surface-900"></div>
+		<TaskModalHeader />
+		<div class="bg-surface-900 flex flex-row">
+			<TaskModalLeftActivity />
+			<TaskModalRightActivity />
+		</div>
+		<TaskModalFooter props={{ isNew: false }} />
+	</div>
 {/if}
