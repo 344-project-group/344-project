@@ -9,7 +9,7 @@
 	export let tasksForDay;
 </script>
 
-<div class="bg-gray-900 text-white text-md">
+<div class="bg-gray-900 rounded-md text-white text-md">
 	<Day {tasksForDay} />
 	<div class="flex flex-col gap-2">
 		{#each tasksForDay.tasks as task}
