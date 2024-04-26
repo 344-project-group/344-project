@@ -1,6 +1,16 @@
 <script>
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
+	import { initializeStores, Modal } from '@skeletonlabs/skeleton';
+	import TaskModal from '../components/modals/TaskModal.svelte';
+	/*
+	 * Record<string, ModalComponent>
+	 */
+	const modalRegistry = {
+		TaskModal: { ref: TaskModal }
+	};
+
+	initializeStores();
 
 	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
 	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
@@ -33,6 +43,7 @@
 	});
 </script>
 
+<Modal components={modalRegistry} />
 <!-- App Shell -->
 <AppShell>
 	<div id="title-bar" slot="header">
@@ -54,10 +65,6 @@
 	</svelte:fragment>
 
 	<slot />
-	<a href="/../components/sidebarLeft/SidebarLeft.svelte">
-		<button class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">Create Task</button>
-	  </a>
-	  
 </AppShell>
 
 <style lang="postcss">
