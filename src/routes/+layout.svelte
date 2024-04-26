@@ -1,8 +1,19 @@
 <script>
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
+	import { initializeStores, Modal } from '@skeletonlabs/skeleton';
+	import TaskModal from '../components/modals/TaskModal.svelte';
+	/*
+	 * Record<string, ModalComponent>
+	 */
+	const modalRegistry = {
+		TaskModal: { ref: TaskModal }
+	};
+
+	initializeStores();
 
 	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
+	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -32,6 +43,7 @@
 	});
 </script>
 
+<Modal components={modalRegistry} />
 <!-- App Shell -->
 <AppShell>
 	<div id="title-bar" slot="header">
@@ -46,6 +58,10 @@
 	<!-- Page Route Content -->
 	<svelte:fragment slot="sidebarRight">
 		<SidebarRight />
+	</svelte:fragment>
+
+	<svelte:fragment slot="sidebarLeft">
+		<SidebarLeft />
 	</svelte:fragment>
 
 	<slot />
