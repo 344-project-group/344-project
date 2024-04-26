@@ -3,6 +3,7 @@
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 
 	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
+	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -48,7 +49,15 @@
 		<SidebarRight />
 	</svelte:fragment>
 
+	<svelte:fragment slot="sidebarLeft">
+		<SidebarLeft />
+	</svelte:fragment>
+
 	<slot />
+	<a href="/../components/sidebarLeft/SidebarLeft.svelte">
+		<button class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">Create Task</button>
+	  </a>
+	  
 </AppShell>
 
 <style lang="postcss">
