@@ -2,18 +2,6 @@
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 	import { initializeStores, Modal } from '@skeletonlabs/skeleton';
-	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
-	/*
-	 * Record<string, ModalComponent>
-	 */
-	const modalRegistry = {
-		TaskModal: { ref: TaskModal }
-	};
-
-	initializeStores();
-
-	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
-	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -37,6 +25,21 @@
 			});
 		});
 	}
+
+	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
+	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
+
+	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
+	import AuthModal from '../components/modals/authModal/AuthModal.svelte';
+	/*
+	 * Record<string, ModalComponent>
+	 */
+	const modalRegistry = {
+		TaskModal: { ref: TaskModal },
+		AuthModal: { ref: AuthModal }
+	};
+
+	initializeStores();
 
 	onMount(() => {
 		detectSWUpdate();
