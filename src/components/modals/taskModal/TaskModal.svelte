@@ -8,13 +8,14 @@
 	export let parent;
 
 	const modalStore = getModalStore();
+
+	const cBase = 'card p-4 w-modal h-modal shadow-xl space-y-4';
 </script>
 
 {#if $modalStore[0]}
-	<div class="">
-		<div class="bg-surface-900"></div>
+	<div class={cBase}>
 		<TaskModalHeader />
-		<div class="bg-surface-900 flex flex-row">
+		<div class="flex flex-row">
 			<TaskModalLeftActivity />
 			<TaskModalRightActivity />
 		</div>

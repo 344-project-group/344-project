@@ -10,7 +10,7 @@
 	export let props;
 </script>
 
-<div class="bg-surface-900 flex flex-row select-none">
+<div class="flex flex-row justify-end space-x-4 select-none">
 	<TaskModalCancelButton />
 	{#if props.isNew === false}
 		<TaskModalCreateButton />
