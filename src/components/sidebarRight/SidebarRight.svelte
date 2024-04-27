@@ -7,5 +7,5 @@
 <div class="flex flex-col space-y-4 select-none my-4">
 	<AuthButton />
 	<CreateTaskButton />
-	<TaskColumn />
+	<div class="bg-gray-900 rounded-md"><TaskColumn /></div>
 </div>
