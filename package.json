@@ -41,6 +41,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@floating-ui/dom": "1.6.3"
+    "@floating-ui/dom": "1.6.3",
+    "date-picker-svelte": "^2.12.0"
   }
 }
