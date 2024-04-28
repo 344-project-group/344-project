@@ -32,6 +32,8 @@
 	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
 	import AuthModal from '../components/modals/authModal/AuthModal.svelte';
 	import ScheduleModal from '../components/modals/scheduleModal/ScheduleModal.svelte';
+	import MonthlyCalendar from '../components/slot/calendar/monthlyCalendar.svelte';
+	import Slot from '../components/slot/slot.svelte';
 	/*
 	 * Record<string, ModalComponent>
 	 */
@@ -65,11 +67,13 @@
 		<SidebarRight />
 	</svelte:fragment>
 
+	<Slot/>
+
 	<svelte:fragment slot="sidebarLeft">
 		<SidebarLeft />
 	</svelte:fragment>
 
-	<slot />
+	
 </AppShell>
 
 <style lang="postcss">
