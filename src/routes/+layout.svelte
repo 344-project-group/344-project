@@ -31,12 +31,14 @@
 
 	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
 	import AuthModal from '../components/modals/authModal/AuthModal.svelte';
+	import ScheduleModal from '../components/modals/scheduleModal/ScheduleModal.svelte';
 	/*
 	 * Record<string, ModalComponent>
 	 */
 	const modalRegistry = {
 		TaskModal: { ref: TaskModal },
-		AuthModal: { ref: AuthModal }
+		AuthModal: { ref: AuthModal },
+		ScheduleModal: { ref: ScheduleModal }
 	};
 
 	initializeStores();
