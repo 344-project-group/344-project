@@ -1,5 +1,7 @@
 <script>
-	import MonthlyCalendar from "./calendar/monthlyCalendar.svelte";
+	import MonthlyCalendar from './calendar/monthlyCalendar.svelte';
 </script>
 
-<MonthlyCalendar/>
+<div class="bg-surface-900">
+	<MonthlyCalendar />
+</div>

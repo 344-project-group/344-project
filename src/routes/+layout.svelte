@@ -67,13 +67,11 @@
 		<SidebarRight />
 	</svelte:fragment>
 
-	<Slot/>
+	<Slot />
 
 	<svelte:fragment slot="sidebarLeft">
 		<SidebarLeft />
 	</svelte:fragment>
-
-	
 </AppShell>
 
 <style lang="postcss">
