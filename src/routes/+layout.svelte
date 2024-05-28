@@ -26,24 +26,28 @@
 		});
 	}
 
+	onMount(() => {
+		detectSWUpdate();
+	});
+
 	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
 	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
 
 	import TaskModal from '../components/modals/taskModal/TaskModal.svelte';
 	import AuthModal from '../components/modals/authModal/AuthModal.svelte';
+	import ScheduleModal from '../components/modals/scheduleModal/ScheduleModal.svelte';
+	import MonthlyCalendar from '../components/slot/calendar/monthlyCalendar.svelte';
+	import Slot from '../components/slot/slot.svelte';
 	/*
 	 * Record<string, ModalComponent>
 	 */
 	const modalRegistry = {
 		TaskModal: { ref: TaskModal },
-		AuthModal: { ref: AuthModal }
+		AuthModal: { ref: AuthModal },
+		ScheduleModal: { ref: ScheduleModal }
 	};
 
 	initializeStores();
-
-	onMount(() => {
-		detectSWUpdate();
-	});
 </script>
 
 <Modal components={modalRegistry} />
@@ -63,11 +67,11 @@
 		<SidebarRight />
 	</svelte:fragment>
 
+	<Slot />
+
 	<svelte:fragment slot="sidebarLeft">
 		<SidebarLeft />
 	</svelte:fragment>
-
-	<slot />
 </AppShell>
 
 <style lang="postcss">

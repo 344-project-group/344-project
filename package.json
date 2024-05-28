@@ -41,6 +41,14 @@
   },
   "type": "module",
   "dependencies": {
-    "@floating-ui/dom": "1.6.3"
+    "@floating-ui/dom": "1.6.3",
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/interaction": "^6.1.11",
+    "@tiptap/core": "^2.3.0",
+    "@tiptap/pm": "^2.3.0",
+    "@tiptap/starter-kit": "^2.3.0",
+    "date-picker-svelte": "^2.12.0",
+    "svelte-grid-extended": "^1.1.4"
   }
 }
