@@ -1,3 +1,4 @@
+<!-- Day.svelte -->
 <script>
 	/**
 	 * @type {{date:Date, tasks:{title:string, description:string, interval:{start:Date, end:Date}}[]}}
