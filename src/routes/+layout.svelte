@@ -26,6 +26,10 @@
 		});
 	}
 
+	onMount(() => {
+		detectSWUpdate();
+	});
+
 	import SidebarRight from '../components/sidebarRight/SidebarRight.svelte';
 	import SidebarLeft from '../components/sidebarLeft/SidebarLeft.svelte';
 
@@ -44,10 +48,6 @@
 	};
 
 	initializeStores();
-
-	onMount(() => {
-		detectSWUpdate();
-	});
 </script>
 
 <Modal components={modalRegistry} />
